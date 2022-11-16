@@ -1,4 +1,4 @@
-const eqArrays = function(a, b) {
+const assertArraysEqual = function(a, b) {
 
   if (a.length !== b.length) return console.log(`🛑🛑🛑 Assertion Failed: ${a} !== ${b}`);
 
