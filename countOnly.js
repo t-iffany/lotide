@@ -16,7 +16,7 @@ const countOnly = function(allItems, itemsToCount) {
   const results = {};                                      //empty object for final answer
 
   for (const item of allItems) {                           //loop over all items in the allItems array
-    console.log(item);                                     //prints all the items in the array
+    console.log(item);                    s                 //prints all the items in the array
 
     // inside the loop, increment the counter for each item:
     // set a property with that string key to: the value that was already there (or zero if nothing there) with 1 added to it.
@@ -36,7 +36,7 @@ const countOnly = function(allItems, itemsToCount) {
 
 
 
-//test code
+/*test code
 
 const firstNames = [
   "Karl",
@@ -56,3 +56,5 @@ assertEqual(result1["Jason"], 1); //true
 assertEqual(result1["Karima"], undefined); //true
 assertEqual(result1["Fang"], 2); //true
 assertEqual(result1["Agouhanna"], undefined); //true
+
+*/
