@@ -1,35 +1,11 @@
-const eqArrays = function(a, b) {                        // compares 2 arrays to see if they are identical
-
-  if (a.length !== b.length) return false;
-
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-
-const assertArraysEqual = function(a, b) {
-
-  if (a.length !== b.length) return console.log(`🛑🛑🛑 Assertion Failed: ${a} !== ${b}`);
-
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i]) {
-      return console.log(`🛑🛑🛑 Assertion Failed: ${a} !== ${b}`);
-    }
-  }
-  return console.log(`✅✅✅ Assertion Passed: ${a} === ${b}`);
-};
-
+const assertArraysEqual = require('./assertArraysEqual');
 
 // ACTUAL FUNCTION
 
 const middle = function(array) {                       //create middle function and pass array 
 
   if (array.length <= 2) {                             //if array.length/2 <= 2, return empty []
-    return console.log([]);
+    return [];
   }
 
   if (array.length % 2 !== 0) {                        //if array has odd number of elements
@@ -46,21 +22,5 @@ const middle = function(array) {                       //create middle function 
 
 
 
-/*test cases
 
-let result = middle([1]); // => []
-console.log(result);
-result = middle([1, 2]); // => []
-console.log(result);
-
-result = middle([1, 2, 3]); // => [2]
-console.log(result);
-result = middle([1, 2, 3, 4, 5]); // => [3]
-console.log(result);
-
-result = middle([1, 2, 3, 4]); // => [2, 3]
-console.log(result);
-result = middle([1, 2, 3, 4, 5, 6]); // => [3, 4]
-console.log(result);
-
-*/
+module.exports = middle;
