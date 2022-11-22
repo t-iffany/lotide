@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@t-iffany/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Functions Library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/t-iffany/lotide.git"
   },
-  "author": "",
+  "author": "t-iffany",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/t-iffany/lotide/issues"
