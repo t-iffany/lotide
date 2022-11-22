@@ -1,3 +1,36 @@
+
+const assert = require('chai').assert;
+const tail = require('../tail');
+
+describe("#tail", () => {
+
+  const words = ['Hello', 'Lighthouse', 'Labs'];
+  it("returns 2 for tail(words).length", () => {
+    assert.strictEqual(tail(words).length, 2);
+  });
+
+  it("returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(['Hello', 'Lighthouse', 'Labs']), ['Lighthouse', 'Labs']);
+  });
+
+  it("returns ['Beta' 'Charlie' 'Delta'] for ['Alpha', 'Beta', 'Charlie', 'Delta']", () => {
+    assert.deepEqual(tail(['Alpha', 'Beta', 'Charlie', 'Delta']), ['Beta', 'Charlie', 'Delta']);
+  });
+
+  it("returns [] for ['Hello']", () => {
+    assert.deepEqual(tail(['Hello']), []);
+  });
+
+  it("returns [] for []", () => {
+    assert.deepEqual(tail([]), []);
+  });
+
+});
+
+
+
+/*
+
 // test/tailTest.js
 
 const tail = require('../tail');
@@ -38,3 +71,4 @@ const empty = '[]'
 tail(empty);
 assertEqual(empty, '[]'); // ensure empty array
 */
+
